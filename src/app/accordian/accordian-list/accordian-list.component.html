@@ -1,0 +1,21 @@
+<div class="accordian-item" [class.active]="list.active" *ngIf="list">
+    <div class="accordian-header" (click)="toggleTrigger()">
+        <div class="accordian-question align-center">Q{{list.id}}</div>
+        <div class="accordian-title">{{list.question}}</div>
+        <div class="accordian-expand align-center">
+            <svg class="svg-rotate__icon" width="40px" height="40px" viewBox="0 0 357 357">
+                <g id="add">
+                    <path d="M357,204H204v153h-51V204H0v-51h153V0h51v153h153V204z" />
+                </g>
+            </svg>
+        </div>
+    </div>
+    <div class="accordian-discription">
+        <p>{{list.answer}}
+        </p>
+    </div>
+    <span class="black-border-bottom"></span>
+</div>
+<div *ngIf="!list">
+    <div class="no-accordian-list">Accordian item not found</div>
+</div>

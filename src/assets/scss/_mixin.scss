@@ -1,0 +1,12 @@
+@mixin border($color, $height){
+    height: $height;
+    background-color: $black-color;
+    display: block;
+    width: 100%;
+}
+@mixin tranistion($time) {
+    transition: all $time;
+}
+@mixin trasformRotate($deg) {
+    transform: rotate($deg);
+}

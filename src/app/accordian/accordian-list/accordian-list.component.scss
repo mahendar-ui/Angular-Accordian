@@ -1,0 +1,84 @@
+@import '../../../assets/scss/_typography.scss';
+@import '../../../assets/scss/_colours.scss';
+@import '../../../assets/scss/_mixin.scss';
+
+.accordian-item {
+    .accordian-header {
+        display: grid;
+        grid-template-columns: 50px 1fr 70px;
+        grid-gap: 15px;
+        align-items: center;
+        padding: 24px 12px;
+        cursor: pointer;
+        transition: all 0.4s;
+
+        .accordian-question {
+            font-family: $font-family-bold;
+            font-size: 35px;
+        }
+
+        .accordian-title {
+            font-family: $font-family-regular;
+            font-size: 20px;
+        }
+
+        .accordian-expand {
+            padding: 10px;
+            background-color: $yellow-color;
+            height: 40px;
+
+            svg {
+                @include tranistion(0.5s);
+            }
+        }
+    }
+
+    .accordian-discription {
+        padding: 0px 12px;
+        font-family: $font-family-regular;
+        font-size: 20px;
+        height: 0px;
+        display: none;
+        @include tranistion(0.5s);
+    }
+
+    &.active {
+        .accordian-header {
+            background-color: $gray-color;
+        }
+
+        .accordian-expand svg {
+            @include trasformRotate(45deg);
+            @include tranistion(0.5s);
+        }
+
+        .accordian-discription {
+            height: 100%;
+            display: block;
+        }
+    }
+
+    &:hover {
+        .accordian-header {
+            background-color: $gray-color;
+        }
+    }
+}
+
+.black-border-bottom {
+    @include border($black-color, 5px);
+    margin-bottom: 10px;
+}
+
+.align-center {
+    text-align: center;
+}
+.no-accordian-list{
+    background-color: $danger-color;
+    width: 100%;
+    color: $white-color;
+    text-align: center;
+    padding: 13px 0px;
+    font-family: $font-family-regular;
+    font-size: 20px;
+}

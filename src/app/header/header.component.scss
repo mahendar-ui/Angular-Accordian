@@ -1,0 +1,14 @@
+@import '../../assets/scss/_typography.scss';
+@import '../../assets/scss/_colours.scss';
+@import '../../assets/scss/_mixin.scss';
+
+.heading {
+    text-transform: uppercase;
+    font-family: $font-family-bold;
+    font-size: 50px;
+}
+
+.black-border {
+    @include border($black-color, 20px); //mixins can be reusable around the application
+    margin-bottom: 40px;
+}

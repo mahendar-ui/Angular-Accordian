@@ -1,0 +1,5 @@
+<div class="accordian-item" *ngFor="let list of accordianList">
+    <!-- app-accordian-list is a selector, the list displayed saparated by generic component. this component
+    can be used anywhere by passing the object of list -->
+    <app-accordian-list [list]="list"></app-accordian-list>
+</div>
